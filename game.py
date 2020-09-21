@@ -205,7 +205,7 @@ class GetDiploma(GameEngine):
 
 
 
-
+#сделал коммент
 
 
 
