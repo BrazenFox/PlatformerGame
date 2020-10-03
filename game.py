@@ -67,14 +67,14 @@ class GetDiploma(GameEngine):
             self.image.character_change(c.menu_layla)
 
         def on_click_layla(button):
-            print("selected layla")
+            #print("selected layla")
             self.style_player = "layla"
 
         def on_move_dmitry(button):
             self.image.character_change(c.menu_dmitry)
 
         def on_click_dmitry(button):
-            print("selected dmitry")
+            #print("selected dmitry")
             self.style_player = "dmitry"
 
         for i, (text, click_handler) in enumerate((('PLAY', on_play), ('QUIT', on_quit))):
@@ -114,7 +114,7 @@ class GetDiploma(GameEngine):
         self.create_image()
 
     def create_game_objects(self):
-        print("created")
+        #print("created")
         self.loadLevel()
         self.create_player()
 

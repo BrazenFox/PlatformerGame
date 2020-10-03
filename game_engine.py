@@ -19,11 +19,11 @@ class GameEngine:
         pygame.init()
         pygame.font.init()
         self.surface = pygame.display.set_mode((width, height))
-        #self.surface = pygame.display.set_mode((width, height), pygame.HWSURFACE | pygame.DOUBLEBUF | pygame.FULLSCREEN)
+        # self.surface = pygame.display.set_mode((width, height), pygame.HWSURFACE | pygame.DOUBLEBUF | pygame.FULLSCREEN)
 
         pygame.display.set_caption(caption)
 
-        #self.background_image = pygame.image.load(back_image_filename)
+        # self.background_image = pygame.image.load(back_image_filename)
 
         self.background_image = pygame.Surface((width, height))  # Создание видимой поверхности
         self.background_image.fill(pygame.Color("#004400"))
@@ -47,6 +47,7 @@ class GameEngine:
         y = min(0, y)  # Не движемся дальше верхней границы
         self.game_camera.x = x
         self.game_camera.y = y
+
     def update(self):
         if self.play:
             for o in self.objects:
@@ -77,10 +78,6 @@ class GameEngine:
             elif event.type in (pygame.MOUSEBUTTONDOWN, pygame.MOUSEBUTTONUP, pygame.MOUSEMOTION):
                 for handler in self.mouse_handlers:
                     handler(event.type, event.pos)
-
-
-
-
 
     def run(self):
         while not self.game_over:

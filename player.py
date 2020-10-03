@@ -174,7 +174,7 @@ class Player:
     def draw(self, surface, pos):
         self.animate()
         surface.blit(self.character, self.player.move(pos))
-        print(self.turn_left)
+        #print(self.turn_left)
 
     def handle(self, key):
         if key == pygame.K_a:
