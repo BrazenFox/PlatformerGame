@@ -35,7 +35,7 @@ class GameEngine:
         self.keydown_handlers = defaultdict(list)
         self.keyup_handlers = defaultdict(list)
         self.mouse_handlers = []
-
+#########
     def camera(self):
         x = self.player.player.x
         y = self.player.player.y
