@@ -47,9 +47,9 @@ button_normal_back_color = colors.INDIANRED1
 button_hover_back_color = colors.INDIANRED2
 button_pressed_back_color = colors.INDIANRED3
 
-menu_layla =  'data/images/layla.png'
+menu_girl =  'data/images/girl.png'
 menu_mario =  'data/images/mario.png'
-menu_dmitry = 'data/images/dmitry.png'
+menu_boy = 'data/images/boy.png'
 
 menu_offset_x = 20
 menu_offset_y = 300

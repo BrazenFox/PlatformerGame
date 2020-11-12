@@ -20,7 +20,7 @@ import colors
 class GetDiploma(GameEngine):
 
     def __init__(self):
-        GameEngine.__init__(self, 'Get Diploma', c.screen_width, c.screen_height, c.background_image, c.frame_rate)
+        GameEngine.__init__(self, 'Platformer', c.screen_width, c.screen_height, c.background_image, c.frame_rate)
         self.reset_effect = None
         self.effect_start_time = None
         self.score = 0
@@ -43,7 +43,7 @@ class GetDiploma(GameEngine):
         self.playerX = 0
         self.playerY = 0
 
-        self.style_player = "dmitry"
+        self.style_player = "boy"
 
     def create_menu(self):
 
@@ -63,19 +63,19 @@ class GetDiploma(GameEngine):
             pygame.quit()
             sys.exit
 
-        def on_move_layla(button):
-            self.image.character_change(c.menu_layla)
+        def on_move_girl(button):
+            self.image.character_change(c.menu_girl)
 
-        def on_click_layla(button):
-            #print("selected layla")
-            self.style_player = "layla"
+        def on_click_girl(button):
+            #print("selected girl")
+            self.style_player = "girl"
 
-        def on_move_dmitry(button):
-            self.image.character_change(c.menu_dmitry)
+        def on_move_boy(button):
+            self.image.character_change(c.menu_boy)
 
-        def on_click_dmitry(button):
-            #print("selected dmitry")
-            self.style_player = "dmitry"
+        def on_click_boy(button):
+            #print("selected boy")
+            self.style_player = "boy"
 
         for i, (text, click_handler) in enumerate((('PLAY', on_play), ('QUIT', on_quit))):
             b = Button(c.menu_offset_x,
@@ -90,7 +90,7 @@ class GetDiploma(GameEngine):
             self.menu_objects.append(b)
             self.mouse_handlers.append(b.handle_mouse_event)
 
-        for i, (text, click_handler, move_handler) in enumerate((('LAYLA', on_click_layla, on_move_layla), ('DMITRY', on_click_dmitry, on_move_dmitry))):
+        for i, (text, click_handler, move_handler) in enumerate((('GIRL', on_click_girl, on_move_girl), ('BOY', on_click_boy, on_move_boy))):
             b = Character_button(c.menu_offset_x,
                        c.menu_offset_y + (c.menu_button_h + 5) * (i+1),
                        c.menu_button_w,
@@ -105,7 +105,7 @@ class GetDiploma(GameEngine):
             self.mouse_handlers.append(b.handle_mouse_event)
 
     def create_image(self):
-        self.image = Image(c.center_image_x, c.center_image_y, c.menu_dmitry)
+        self.image = Image(c.center_image_x, c.center_image_y, c.menu_boy)
         #self.objects.append(self.image)
         self.menu_objects.append(self.image)
 
